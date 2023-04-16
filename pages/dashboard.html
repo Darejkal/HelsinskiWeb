@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <script text="text/javascript">
+        if (!JSON.parse(localStorage.getItem('user'))) {
+            window.location.href = "./login.html"
+            localStorage.clear()
+        }
+
+
+    </script>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <title>
+        Helsinski
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/soft-ui-dashboard.css" />
+    <link rel="stylesheet" href="../custom/custom.css" />
+
+</head>
+
+<body class="max-height-vh-100 h-100 border-radius-lg d-flex flex-column">
+    <nav class="navbar navbar-main navbar-expand-lg position-relative mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky"
+        id="navbarBlur" data-scroll="true">
+        <div class="container-fluid py-1 px-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                    <li class="breadcrumb-item text-sm">
+                        <a class="opacity-3 text-dark me-2" href="dashboard.html">
+                            <svg width="12px" height="12px" class="mb-1" viewBox="0 0 45 40" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>shop </title>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-1716.000000, -439.000000)" fill="#252f40"
+                                        fill-rule="nonzero">
+                                        <g transform="translate(1716.000000, 291.000000)">
+                                            <g transform="translate(0.000000, 148.000000)">
+                                                <path
+                                                    d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z">
+                                                </path>
+                                                <path
+                                                    d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <a class="opacity-5 text-dark" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark"
+                            href="deviceview.html">DeviceView</a>
+                    </li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="mapview.html">MapView</a>
+                    </li>
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="setting.html">Setting</a>
+                    </li>
+                </ol>
+                <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+            </nav>
+            <button class=" btn btn-secondary" href="mapview.html" onclick="onLogout()">Logout</button>
+        </div>
+        <script>function onLogout() { localStorage.removeItem('user'); window.location.href = "./login.html"; return false; }</script>
+    </nav>
+    <div class="container-fluid py-3 d-flex flex-row flex-wrap justify-content-center align-items-stretch">
+        <div class="m-2 d-flex justify-content-center align-items-stretch">
+            <div class="card d-flex p-3 flex-column justify-content-center align-items-stretch">
+                <div class="card ">
+                    <div class="chart p-2" id="">
+                        <canvas id="Chart1" class="chart-canvas" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="ms-2 d-flex flex-row justify-content-around align-items-center">
+                    <div class="card mb-2 d-flex flex-column justify-content-around align-items-center">
+                        <div class="chart p-2" id="">
+                            <canvas id="Chart1_1" class="chart-canvas" height="90" width="90"></canvas>
+                        </div>
+                        <h6 id="textRSRP">RSRP</h6>
+                    </div>
+                    <div class="card mb-2 d-flex flex-column justify-content-around align-items-center">
+                        <div class="chart p-2" id="">
+                            <canvas id="Chart1_2" class="chart-canvas" height="90" width="90"></canvas>
+                        </div>
+                        <h6 id="textRSRQ">RSRQ</h6>
+                    </div>
+                    <div class="card mb-2 d-flex flex-column justify-content-around align-items-center">
+                        <div class="chart p-2" id="">
+                            <canvas id="Chart1_3" class="chart-canvas" height="90" width="90"></canvas>
+                        </div>
+                        <h6 id="textSINR">SINR</h6>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="card m-2">
+            <div class="card m-2">
+                <div class="card-body px-0 py-0">
+                    <div id="mapid" class="leaflet px-12"></div>
+                </div>
+            </div>
+
+            <div class=" d-flex flex-row justify-content-center align-items-center">
+                <div class="m-3 d-flex flex-column justify-content-center align-items-center">
+                    <h5>Package Loss</h5>
+                    <h3 class="text-primary text-uppercase" aria-label="textLastPackageSent">0 Cell(s)</h3>
+                </div>
+                <div class="m-3 d-flex flex-column justify-content-center align-items-center">
+
+                    <h5>Problem Cell(s)</h5>
+                    <h3 class="text-danger text-uppercase" aria-label="textLastPackageSent">X</h3>
+                </div>
+
+                <div class="m-3 d-flex flex-column justify-content-center align-items-center">
+                    <h5>Signal Review</h5>
+                    <h3 class="text-success text-uppercase" id="textStatus">Fair</h3>
+                </div>
+
+            </div>
+            <div class="m-2 mx-5 card d-flex flex-row justify-content-evenly">
+                <div class="px-2 py-3 d-flex align-items-center">
+                    <h5>Selected Building:</h5>
+                </div>
+                <div class="d-flex justify-content-around align-items-center">
+                    <div class="btn-group dropdown">
+                        <button type="button" class="btn bg-gradient-primary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="buttonDropdownMenu">
+                            Loading...
+                        </button>
+                        <ul class="dropdown-menu px-2 py-3" id="listDropdownMenu">
+                            <!-- <li><a class="dropdown-item border-radius-md" href="#">Viettel Hall</a></li> -->
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div
+        class="position-relative fixed-bottom container-fluid d-flex flex-wrap justify-content-center align-items-stretch">
+        <p class="text-sm">© The Helsinski Project</p>
+    </div>
+    <!-- LineChart -->
+    <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <script src="../assets/js/plugins/leaflet.js"></script>
+    <script src="../assets/js/core/bootstrap.bundle.min.js"></script>
+    <script>
+        var map = L.map('mapid').setView([51.505, -0.09], 13);
+        let devices = []
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var rectangleSet = false;
+        function canvasInit(id, LineChartData, yDisplayTicks = true) {
+            let ctx = document.getElementById(id).getContext("2d");
+            let colors = [
+                { c: "#cb0c9f", g: ctx.createLinearGradient(0, 230, 0, 50) },
+                { c: "#3A416F", g: ctx.createLinearGradient(0, 230, 0, 50) },
+                { c: "#82d616", g: ctx.createLinearGradient(0, 230, 0, 50) },
+            ]
+            colors[0].g.addColorStop(1, 'rgba(203,12,159,0.2)');
+            colors[0].g.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+            colors[0].g.addColorStop(0, 'rgba(203,12,159,0)');
+
+
+            colors[1].g.addColorStop(1, 'rgba(20,23,39,0.2)');
+            colors[1].g.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+            colors[1].g.addColorStop(0, 'rgba(20,23,39,0)');
+
+            colors[2].g.addColorStop(1, 'rgba(111, 194, 23,0.2)');
+            colors[2].g.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+            colors[2].g.addColorStop(0, 'rgba(111, 194, 23,0)');
+
+            return new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: LineChartData.xValue,
+                    datasets: LineChartData.datas.map(
+                        (val) => {
+                            return (
+                                {
+                                    label: val.label,
+                                    tension: 0.4,
+                                    borderWidth: 0,
+                                    pointRadius: 0,
+                                    borderColor: colors[val.id % colors.length].c,
+                                    borderWidth: 3,
+                                    backgroundColor: colors[val.id % colors.length].g,
+                                    fill: true,
+                                    data: val.yValue,
+                                    maxBarThickness: 6
+                                }
+                            )
+                        }
+                    )
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index',
+                    },
+                    scales: {
+                        y: {
+                            grid: {
+                                drawBorder: false,
+                                display: false,
+                                drawOnChartArea: true,
+                                drawTicks: false,
+                                borderDash: [5, 5]
+                            },
+                            ticks: {
+                                display: yDisplayTicks,
+                                padding: 10,
+                                color: '#b2b9bf',
+                                font: {
+                                    size: 11,
+                                    family: "Open Sans",
+                                    style: 'normal',
+                                    lineHeight: 2
+                                },
+                            }
+                        },
+                        x: {
+                            grid: {
+                                drawBorder: false,
+                                display: false,
+                                drawOnChartArea: false,
+                                drawTicks: false,
+                                borderDash: [5, 5]
+                            },
+                            ticks: {
+                                display: false,
+                                color: '#b2b9bf',
+                                padding: 10,
+                                font: {
+                                    size: 11,
+                                    family: "Open Sans",
+                                    style: 'normal',
+                                    lineHeight: 2
+                                },
+                                autoSkip: true,
+                                maxTicksLimit: 20
+                            }
+                        },
+                    },
+                },
+            });
+        }
+
+        let charts = [canvasInit("Chart1", {
+            xValue: [],
+            datas: [
+                {
+                    id: 0,
+                    label: "RSRP",
+                    yValue: [],
+                    yDisplay: false,
+                },
+                {
+                    id: 1,
+                    label: "RSRQ",
+                    yValue: []
+                },
+                {
+                    id: 2,
+                    label: "SINR",
+                    yValue: []
+                }
+            ],
+        }),
+        canvasInit("Chart1_1", {
+            xValue: [],
+            datas: [
+                {
+                    id: 0,
+                    label: "RSRP",
+                    yValue: [],
+                    yDisplay: false,
+                },
+            ],
+        }, false),
+        canvasInit("Chart1_2", {
+            xValue: [],
+            datas: [
+
+                {
+                    id: 1,
+                    label: "RSRQ",
+                    yValue: []
+                },
+            ],
+        }, false),
+        canvasInit("Chart1_3", {
+            xValue: [],
+            datas: [
+                {
+                    id: 2,
+                    label: "SINR",
+                    yValue: []
+                }
+            ],
+        }, false)]
+        function addData(chart, label, datas) {
+            chart.data.labels.push(label);
+            chart.data.datasets.forEach((dataset, i) => {
+                dataset.data.push(datas[i]);
+            });
+            chart.update();
+        }
+
+        function removeData(chart) {
+            chart.data.labels.shift();
+            chart.data.datasets.forEach((dataset) => {
+                dataset.data.shift();
+            });
+            chart.update();
+        }
+        function recolorTextOnValue(val, comp, degs) {
+            if (val >= degs[0]) {
+                comp.className = "text-success"
+                comp.parentElement.classList.remove("bg-gradient-dark");
+                return 1;
+            } else if (val > degs[1]) {
+                comp.className = "text-info"
+                comp.parentElement.classList.remove("bg-gradient-dark");
+                return 1;
+            } else if (val > degs[2]) {
+                comp.className = "text-warning"
+                comp.parentElement.classList.remove("bg-gradient-dark");
+                return 0;
+            } else {
+                comp.className = "text-danger"
+                comp.parentElement.classList.add("bg-gradient-dark");
+                return -1;
+            }
+        }
+        let maxCurData = 20, maxOldData = 2000, rsrp = 0, rsrq = 0, sinr = 0, alp = 0.8;
+        let textRSRP = document.getElementById("textRSRP");
+        let textRSRQ = document.getElementById("textRSRQ");
+        let textSINR = document.getElementById("textSINR");
+        let textStatus = document.getElementById("textStatus");
+        function addDropdown(device) {
+            let listDropdown = document.getElementById("listDropdownMenu")
+            let li = document.createElement("li");
+            let a = document.createElement("a");
+            a.className = "dropdown-item border-radius-md";
+            li.appendChild(document.createTextNode(device.device))
+            li.appendChild(a);
+            listDropdown.appendChild(li);
+        }
+        function setDropdownButt(device, i) {
+            let b = document.getElementById("buttonDropdownMenu")
+            let temp = device[0]
+            device[0] = device[i]
+            device[i] = temp
+            b.innerHTML = devices[0].device
+        }
+        function addData(chart, label, datas) {
+            chart.data.labels.push(label);
+            chart.data.datasets.forEach((dataset, i) => {
+                dataset.data.push(datas[i]);
+            });
+            chart.update();
+        }
+        function getChartData(idx) {
+            fetch("https://sv1.h23.zedbuilder.com/device-histories?device_id=" + idx, {
+                method: "GET", // *GET, POST, PUT, DELETE, etc.
+                mode: "cors", // no-cors, *cors, same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: "same-origin", // include, *same-origin, omit
+                headers: {
+                    "Content-Type": "application/json",
+                    "authorization": "Bearer ".concat(JSON.parse(localStorage.getItem("user")))
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+            }).then(v => {
+                if (v.ok) {
+                    return v.json()
+                }
+                throw new Error('Something went wrong');
+            }).then((value) => {
+                // let msg = "History of " + value[0].device_id + "\n"
+                // value.forEach((v) => {
+                //     msg += v.created_at
+                //     if (v.signal_info.rsrp) {
+                //         msg += "RSRP:" + v.signal_info.rsrp + "\n"
+                //     }
+                //     if (v.signal_info.rsrq) {
+                //         msg += "RSRQ:" + v.signal_info.rsrq + "\n"
+                //     }
+                //     if (v.status) {
+                //         msg += "Status: " + v.status + "\n"
+                //     }
+                //     console.log(msg)
+                // })
+                // console.log(msg)
+                // alert(msg);
+                let flag=1;
+                let rsrp=0,rsrq=0,sinr=0,alp=0.8;
+                value.forEach((vx,_i)=>{
+                    if(!vx||!vx.signal_info){
+                        return;
+                    }
+                    let v=vx.signal_info
+                    v.sinr=0;
+                    flag = 1;
+                    rsrp = rsrp + alp * (v.rsrp - rsrp)
+                    rsrq = rsrq + alp * (v.rsrq - rsrq)
+                    sinr = sinr + alp * (v.sinr - sinr)
+                    flag = Math.min(flag, recolorTextOnValue(rsrp, textRSRP, [-80, -90, -100]))
+                    flag = Math.min(flag, recolorTextOnValue(rsrq, textRSRQ, [-10, -15, -20]))
+                    flag = Math.min(flag, recolorTextOnValue(sinr, textSINR, [20, 13, 0]))
+                    switch (flag) {
+                        case 1:
+                            textStatus.className = "text-uppercase text-success"
+                            textStatus.innerHTML = "Fair";
+                            document.body.classList.remove("bg-gradient-danger");
+                            break;
+                        case 0:
+                            textStatus.className = "text-uppercase text-warning"
+                            textStatus.innerHTML = "Weak";
+                            document.body.classList.remove("bg-gradient-danger");
+                            break;
+                        default:
+                            textStatus.className = "text-uppercase text-danger"
+                            textStatus.innerHTML = "Loss";
+                            document.body.classList.add("bg-gradient-danger");
+                            break;
+                    }
+                    let datas=[_i,v.rsrq,v.rsrp,v.sinr]
+                    addData(charts[0], _i, [v.rsrq,v.rsrp,v.sinr]);
+                    if (charts[0].data.labels.length > maxCurData) {
+                        removeData(charts[0])
+                    }
+                    for (var i = 1; i < 4; i++) {
+                        addData(charts[i], _i, [datas[i]]);
+                        if (charts[i].data.labels.length > maxOldData) {
+                            removeData(charts[i])
+                        }
+                    }
+                })
+            }).catch((e)=>{
+                console.log(e)
+                alert("Unexpected error when updating graph.")
+            })
+        }
+        fetch("https://sv1.h23.zedbuilder.com/devices", {
+            method: "GET", // *GET, POST, PUT, DELETE, etc.
+            mode: "cors", // no-cors, *cors, same-origin
+            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: "same-origin", // include, *same-origin, omit
+            headers: {
+                "Content-Type": "application/json",
+                "authorization": "Bearer ".concat(JSON.parse(localStorage.getItem("user")))
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+        }).then(v => {
+            if (v.ok) {
+                return v.json()
+            }
+            throw new Error('Something went wrong');
+        }).then((v) => {
+            devices = v
+            setDropdownButt(devices, 1)
+            map.setView(devices[0].location_coords, 30)
+            devices.forEach((v) => {
+                addDropdown(v)
+                L.circle(v.location_coords, 5).setStyle({ fillColor: 'red', color: 'red' }).addTo(map)
+            })
+            getChartData(devices[0]._id)
+        }).catch(()=>{
+            alert("Unexpected error when connecting to server")
+        })
+
+    </script>
+
+
+
+
+</body>
+
+</html>
