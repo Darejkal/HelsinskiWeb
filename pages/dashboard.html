@@ -388,7 +388,7 @@
             chart.update();
         }
         function getChartData(idx) {
-            fetch("https://sv1.h23.zedbuilder.com/device-histories?device_id=" + idx, {
+            fetch("" + idx, {
                 method: "GET", // *GET, POST, PUT, DELETE, etc.
                 mode: "cors", // no-cors, *cors, same-origin
                 cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -469,7 +469,7 @@
                 alert("Unexpected error when updating graph.")
             })
         }
-        fetch("https://sv1.h23.zedbuilder.com/devices", {
+        fetch("", {
             method: "GET", // *GET, POST, PUT, DELETE, etc.
             mode: "cors", // no-cors, *cors, same-origin
             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
