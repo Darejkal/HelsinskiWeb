@@ -1,2 +1,2 @@
 # HelsinskiWeb
-JunctionX 2023 front-end
+JunctionX 2023 Hanoi front-end
